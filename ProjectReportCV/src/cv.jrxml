@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Simple_Blue_Table_Based" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d4a1d5eb-82dd-412f-a620-202e4bdf9dba">
+	<property name="template.engine" value="tabular_template"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<style name="Table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+			<topPen lineWidth="1.0" lineColor="#000000"/>
+			<leftPen lineWidth="1.0" lineColor="#000000"/>
+			<bottomPen lineWidth="1.0" lineColor="#000000"/>
+			<rightPen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="tableDataset" uuid="c53f546c-96fa-4163-b532-f7c64bd538ef">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+	</subDataset>
+	<parameter name="FullName" class="java.lang.String"/>
+	<parameter name="Nationality" class="java.lang.String"/>
+	<parameter name="Date of Birth" class="java.lang.String"/>
+	<parameter name="Gender" class="java.lang.String"/>
+	<parameter name="Address" class="java.lang.String"/>
+	<parameter name="Mobile" class="java.lang.String"/>
+	<parameter name="Email" class="java.lang.String"/>
+	<parameter name="Masters" class="java.lang.String"/>
+	<parameter name="Bechelor" class="java.lang.String"/>
+	<parameter name="HSC" class="java.lang.String"/>
+	<parameter name="SSC" class="java.lang.String"/>
+	<parameter name="JSC" class="java.lang.String"/>
+	<parameter name="Skill1" class="java.lang.String"/>
+	<parameter name="Skill2" class="java.lang.String"/>
+	<parameter name="Skill3" class="java.lang.String"/>
+	<parameter name="Skill4" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<title>
+		<band height="72">
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#006699" uuid="6321f5e3-86eb-444f-acc1-8daaaa0d6c60"/>
+				<staticText>
+					<reportElement x="33" y="20" width="528" height="43" forecolor="#FFFFFF" uuid="9e48917a-7b59-4ffd-baad-725f45563194"/>
+					<textElement>
+						<font size="34" isBold="true"/>
+					</textElement>
+					<text><![CDATA[               Curriculum Vitae]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="13"/>
+	</pageHeader>
+	<pageFooter>
+		<band height="17">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="4" width="515" height="13" backcolor="#E6E6E6" uuid="fed27553-a6c4-4a8a-9056-2f6f2589a3e5"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement mode="Opaque" x="515" y="4" width="40" height="13" backcolor="#E6E6E6" uuid="9f5ad531-d413-49c9-874b-8b99e8150fa6"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="0" y="4" width="100" height="13" uuid="fc593335-5cbf-4caf-97b3-ff897c676bde"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="675" splitType="Stretch">
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<line>
+				<reportElement x="-11" y="40" width="581" height="1" uuid="853d9a3c-53bb-431c-91f9-5feaeb6aac95"/>
+			</line>
+			<textField>
+				<reportElement x="65" y="11" width="100" height="30" uuid="1945f5bb-42f2-402d-af17-ad610ed31a8e"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{FullName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="229" y="59" width="100" height="30" uuid="bd33da68-cc03-4e8a-9939-d39b3c93ca0a"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Nationality}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="227" y="90" width="100" height="30" uuid="239568cf-c96e-40df-9602-272c07ddfd9f"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Date of Birth}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="227" y="128" width="100" height="30" uuid="3e0c4434-0082-43d5-b171-25a026bf1d4a"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Gender}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="228" y="164" width="100" height="30" uuid="cfddc66f-cff1-4853-bb4c-e680f87d91a5"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Address}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="228" y="198" width="100" height="30" uuid="6b7af417-0446-4077-915a-6c6f6330341b"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Mobile}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="229" y="236" width="100" height="30" uuid="2b5a7db0-961a-44ed-890b-575d6800ad62"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Email}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="66" y="54" width="100" height="30" uuid="f9100473-714e-46d1-8cbd-20fa0360a30d"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Nationality"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="65" y="89" width="100" height="30" uuid="7c6c9109-0124-423e-8aec-a6368f770caa"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Date of Birth"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="65" y="122" width="100" height="30" uuid="5c2c27b8-723e-4726-a43b-93ddd304f107"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Gender"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="65" y="157" width="100" height="30" uuid="4ea1c964-6333-4e22-b6e8-b4af5035ed7c"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Address"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="66" y="196" width="100" height="30" uuid="a1545ba9-5021-4c95-8206-15ac90f625db"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Mobile"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="65" y="235" width="100" height="30" uuid="5f175f7e-9363-422a-aed4-a2bccaf96bfd"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Email"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="66" y="272" width="131" height="30" uuid="b4ca5b5b-28c8-4b59-b129-877b456bc8cf"/>
+				<textElement>
+					<font size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Qualification]]></text>
+			</staticText>
+			<line>
+				<reportElement x="-10" y="265" width="585" height="1" uuid="e6fe5d2c-d0c8-473a-8e61-03be3e95bb40"/>
+			</line>
+			<textField>
+				<reportElement x="224" y="316" width="100" height="30" uuid="6deaea95-4ad5-4899-b277-dcb84483cde6"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Masters}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="224" y="356" width="100" height="30" uuid="097372c8-2bc1-4af0-95fc-6a409fc74247"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Bechelor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="224" y="386" width="100" height="30" uuid="4ec7fa9a-e338-41ac-a0f6-43aa9cd2959b"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{HSC}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="226" y="426" width="100" height="30" uuid="5c7b25b5-d58c-4a4a-8277-13e24f0e70e4"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{SSC}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="224" y="473" width="100" height="30" uuid="d46719b8-b738-49f0-ba88-ade4bcebd784"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{JSC}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="67" y="317" width="100" height="30" uuid="7fc06121-3160-4d5b-b508-0bed1fa7d2fa"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Master's degree"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="66" y="352" width="100" height="30" uuid="4002fbcf-1fcb-47c5-afa3-607015b5b26d"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Bechelor's degree"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="66" y="389" width="100" height="30" uuid="fcc7d472-f449-4993-a058-4195816ce26d"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["HSC"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="66" y="424" width="100" height="30" uuid="e64b5fe5-2e1a-46e1-b138-a9289f4d06d5"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["SSC"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="67" y="473" width="100" height="30" uuid="4b540418-f302-49b4-a9b9-2ff062f50e17"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["JSC"]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="42" y="302" width="161" height="1" uuid="77454e8d-3338-4691-b25a-470fb6c025ae"/>
+			</line>
+			<line>
+				<reportElement x="-14" y="497" width="585" height="1" uuid="33135d5c-f25e-4dd2-b9a9-78190d1402ad"/>
+			</line>
+			<staticText>
+				<reportElement x="176" y="498" width="131" height="30" uuid="ed4ad2cc-4444-40e3-a23c-9dbf2a9e2d38"/>
+				<textElement>
+					<font size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SKILLS]]></text>
+			</staticText>
+			<line>
+				<reportElement x="155" y="528" width="161" height="1" uuid="892ea98e-ceba-4c71-847f-38e809f7f38f"/>
+			</line>
+			<textField>
+				<reportElement x="177" y="545" width="100" height="30" uuid="479ca7fd-6e84-4881-a40e-b33c2b7fbf7e"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Skill1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="177" y="579" width="100" height="30" uuid="f0457f07-7362-4a2d-b92e-6d0b22a21581"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Skill2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="176" y="610" width="100" height="30" uuid="df3ac830-fed7-4b2d-80e9-0530390dc96c"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Skill3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="176" y="644" width="100" height="30" uuid="85d7f5e5-c837-4aa3-8053-bf90163e4f4d"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{Skill4}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>
